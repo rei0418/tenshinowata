@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>予約完了 - 綿棒屋</title>
+  <script>
+    window.onload = function() {
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get("name");
+      const tel = params.get("tel");
+      const datetime = params.get("datetime");
+
+      document.getElementById("info").innerHTML = `
+        <p>お名前：${name}</p>
+        <p>電話番号：${tel}</p>
+        <p>予約日時：${datetime}</p>
+      `;
+    };
+  </script>
+</head>
+<body>
+  <h1>予約ありがとうございます！</h1>
+  <div id="info"></div>
+</body>
+</html>
+
